@@ -13,4 +13,5 @@
   prometheus:: import 'prometheus.libsonnet',
   sql:: import 'sql.libsonnet',
   graphite:: import 'graphite.libsonnet',
+  cloudwatch:: import 'cloudwatch.libsonnet',
 }
