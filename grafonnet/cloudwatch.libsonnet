@@ -1,7 +1,7 @@
 {
   /**
    * Return a CloudWatch Target
-   * 
+   *
    * @param region
    * @param namespace
    * @param datasource
@@ -11,26 +11,26 @@
    * @param highResolution
    * @param period
    * @param dimensions
-   
+
    * @return Panel target
    */
 
   target(
-      region,
-      namespace,
-      datasource=null,
-      metricName=null,
-      statistics='Average',
-      alias=null,
-      highResolution=false,
-      period='1m',
-      dimensions={}
+    region,
+    namespace,
+    metric,
+    datasource=null,
+    statistic='Average',
+    alias=null,
+    highResolution=false,
+    period='1m',
+    dimensions={}
   ):: {
     region: region,
     namespace: namespace,
+    metricName: metric,
     [if datasource != null then 'datasource']: datasource,
-    metricName: metricName,
-    statistics: [ statistics ],
+    statistic: [statistic],
     [if alias != null then 'alias']: alias,
     highResolution: highResolution,
     period: period,

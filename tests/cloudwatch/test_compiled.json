@@ -1,5 +1,5 @@
 {
-   "basic": {
+   "advanced": {
       "alias": "ELB requests per instance",
       "datasource": "CloudWatch",
       "dimensions": {
@@ -11,8 +11,19 @@
       "namespace": "AWS/ApplicationELB",
       "period": "1m",
       "region": "eu-west-1",
-      "statistics": [
+      "statistic": [
          "Sum"
+      ]
+   },
+   "basic": {
+      "dimensions": { },
+      "highResolution": false,
+      "metricName": "RequestCountPerTarget",
+      "namespace": "AWS/ApplicationELB",
+      "period": "1m",
+      "region": "eu-west-1",
+      "statistic": [
+         "Average"
       ]
    }
 }
